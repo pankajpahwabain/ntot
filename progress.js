@@ -3,8 +3,7 @@ import { isDeload, isTest } from './plan.js';
 
 // Tracks that have no history of their own borrow a starting weight from a related track.
 export const DERIVE = {
-  'hipthrust-pump': { from: 'hipthrust', ratio: 0.85, label: 'your heavy hip thrust' },
-  deadlift: { from: 'rdl', ratio: 1.45, label: 'your Romanian deadlift' }
+  'hipthrust-pump': { from: 'hipthrust', ratio: 0.85, label: 'your heavy hip thrust' }
 };
 
 export function incrementFor(kind) {
