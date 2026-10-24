@@ -96,15 +96,14 @@ function DayCard({ state, dispatch, week, day, start, startTimer }) {
     );
   }
 
-  const mode = sess.mode === 'home' ? 'home' : 'gym';
-  const def = exercisesFor(day, mode);
+  const def = exercisesFor(day);
 
   const prefill = () => {
     const items = def.ex.map((ex) => {
       const variant = variantFor(ex, week);
       const sug = suggest(state, ex, variant, week, start, pick(ex.r, blockOf(week)));
       return {
-        key: `${week}.${day}.${mode}.${ex.slot}`, week, day, slot: ex.slot, track: variant.id, n: setsFor(ex, week),
+        key: `${week}.${day}.gym.${ex.slot}`, week, day, slot: ex.slot, track: variant.id, n: setsFor(ex, week),
         patch: (s) => (!s.done && !String(s.w).trim() && sug.weight && (ex.log || 'wr') === 'wr' ? { w: String(sug.weight) } : {})
       };
     });
@@ -120,10 +119,6 @@ function DayCard({ state, dispatch, week, day, start, startTimer }) {
         <span>{def.ex.length} exercises</span>
       </div>
 
-      <div className="mode" role="group" aria-label="Where are you training?">
-        <button type="button" aria-pressed={mode === 'gym'} onClick={() => dispatch({ type: 'session', key: sKey, patch: { mode: 'gym' } })}>Gym</button>
-        <button type="button" aria-pressed={mode === 'home'} onClick={() => dispatch({ type: 'session', key: sKey, patch: { mode: 'home' } })}>Home</button>
-      </div>
 
       <details className="warm">
         <summary>Warm-up</summary>
@@ -134,7 +129,7 @@ function DayCard({ state, dispatch, week, day, start, startTimer }) {
 
       <ol className="list">
         {def.ex.map((ex, i) => (
-          <ExerciseCard key={`${week}.${day}.${mode}.${ex.slot}`} ex={ex} index={i + 1} week={week} day={day} mode={mode} state={state} dispatch={dispatch} start={start} startTimer={startTimer} />
+          <ExerciseCard key={`${week}.${day}.${ex.slot}`} ex={ex} index={i + 1} week={week} day={day} state={state} dispatch={dispatch} start={start} startTimer={startTimer} />
         ))}
       </ol>
 
@@ -153,7 +148,7 @@ function DayCard({ state, dispatch, week, day, start, startTimer }) {
   );
 }
 
-function ExerciseCard({ ex, index, week, day, mode, state, dispatch, start, startTimer }) {
+function ExerciseCard({ ex, index, week, day, state, dispatch, start, startTimer }) {
   const b = blockOf(week);
   const variant = variantFor(ex, week);
   const repsText = pick(ex.r, b);
@@ -161,7 +156,8 @@ function ExerciseCard({ ex, index, week, day, mode, state, dispatch, start, star
   const note = pick(ex.note, b);
   const n = setsFor(ex, week);
   const log = ex.log || 'wr';
-  const key = `${week}.${day}.${mode}.${ex.slot}`;
+  // the "gym" part of the key is kept so logs saved by earlier versions still match
+  const key = `${week}.${day}.gym.${ex.slot}`;
   const entry = state.logs[key];
   const sets = Array.from({ length: n }, (_, i) => entry?.sets?.[i] || { w: '', r: '', done: false });
   const sug = suggest(state, ex, variant, week, start, repsText);
