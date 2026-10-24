@@ -206,65 +206,6 @@ export const GYM = {
   }
 };
 
-// ---------------------------------------------------------------- HOME
-
-export const HOME = {
-  mon: {
-    title: 'Home Lower A', time: 'About 45 minutes', focus: 'Single-leg strength and glute work with dumbbells and a couch.', warm: 'lower', after: 'No cardio today.',
-    ex: [
-      { slot: 'a', kind: 'db', t: 'main', s: 4, r: '8-12 each leg', rest: '90 sec', v: V('h-bulg', 'DB Bulgarian split squat'), note: 'Weight is per hand.' },
-      { slot: 'b', kind: 'db', t: 'main', s: 4, r: '10-15 each leg', rest: '90 sec', v: V('h-slthrust', 'Single-leg hip thrust, back on a couch'), note: 'Hold a dumbbell on your hip once bodyweight gets easy.' },
-      { slot: 'c', kind: 'db', t: 'main', s: 3, r: '10-12', rest: '90 sec', v: V('h-rdl', 'DB Romanian deadlift'), note: 'Weight is per hand. Push your hips back and keep the dumbbells close.' },
-      { slot: 'd', kind: 'bw', t: 'iso', log: 'reps', s: 3, r: '30', rest: '45 sec', v: V('h-frog', 'Frog pump'), note: 'Hard squeeze at the top of every rep.' },
-      { slot: 'e', kind: 'bw', t: 'iso', log: 'reps', s: 3, r: '10-15', rest: '45 sec', v: V('h-lyingleg', 'Lying leg raise'), note: 'Keep your lower back pressed down.' }
-    ]
-  },
-  tue: {
-    title: 'Home Upper A', time: 'About 40 minutes', focus: 'Push-ups, rows and shoulder work.', warm: 'upper', after: 'After lifting: 20 to 30 minutes of easy cardio at a conversational pace.',
-    ex: [
-      { slot: 'a', kind: 'bw', t: 'main', log: 'reps', s: 4, r: '8-15', rest: '90 sec', v: V('h-pushup', 'Push-up'), note: 'Stop 2 reps short of failure. Slow lowering.' },
-      { slot: 'b', kind: 'db', t: 'main', s: 4, r: '8-12 each side', rest: '90 sec', v: V('h-row', 'One-arm DB row'), note: 'Pull to your back pocket and stretch at the bottom.' },
-      { slot: 'c', kind: 'db', t: 'main', s: 3, r: '8-12', rest: '90 sec', v: V('h-press', 'Pike press or DB shoulder press'), note: 'Weight is per hand if you use dumbbells.' },
-      { slot: 'd', kind: 'db', t: 'iso', s: 4, r: '12-20', rest: '45 sec', v: V('h-lat', 'DB lateral raise'), note: 'Light and strict. Weight is per hand.' },
-      { slot: 'e', kind: 'db', t: 'iso', s: 3, r: '12-15', rest: '45 sec', v: V('h-rear', 'Bent-over rear delt raise'), note: 'Hinge forward and raise out to the sides.' }
-    ]
-  },
-  wed: {
-    title: 'Home Lower B', time: 'About 45 minutes', focus: 'Quads, hamstrings and glutes with a core finisher.', warm: 'lower', after: 'No cardio today.',
-    ex: [
-      { slot: 'a', kind: 'db', t: 'main', s: 4, r: '10-15', rest: '90 sec', v: V('h-goblet', 'Heels-elevated DB goblet squat'), note: 'Heels on a plate or small step. Sit straight down.' },
-      { slot: 'b', kind: 'bw', t: 'iso', log: 'reps', s: 3, r: '5-8', rest: '90 sec', v: V('h-nordic', 'Nordic or sliding leg curl'), note: 'Lower as slowly as you can.' },
-      { slot: 'c', kind: 'db', t: 'main', s: 3, r: '10 each leg', rest: '90 sec', v: V('h-revlunge', 'Deficit reverse lunge'), note: 'Weight is per hand.' },
-      { slot: 'd', kind: 'band', t: 'iso', log: 'reps', s: 4, r: '15-20', rest: '60 sec', v: V('h-bridge', 'Banded glute bridge'), note: 'Hold a 2-second squeeze at the top.' },
-      { slot: 'e', kind: 'band', t: 'iso', log: 'reps', s: 3, r: '20-25', rest: '45 sec', v: V('h-abd', 'Side-lying hip abduction'), note: 'Toes pointing slightly down.' },
-      { slot: 'f', kind: 'bw', t: 'iso', log: 'reps', s: 3, r: '15-20', rest: '45 sec', v: V('h-bicycle', 'Bicycle crunch', 'UzVC4oW00rM'), note: 'Slow and controlled.' }
-    ]
-  },
-  fri: {
-    title: 'Home Upper B', time: 'About 40 minutes', focus: 'Shoulder shape, back and core.', warm: 'upper', after: 'After lifting: 20 to 30 minutes of easy cardio at a conversational pace.',
-    ex: [
-      { slot: 'a', kind: 'bw', t: 'iso', log: 'reps', s: 3, r: '8-15', rest: '90 sec', v: V('h-fepush', 'Feet-elevated push-up'), note: 'Stop 2 reps short of failure.' },
-      { slot: 'b', kind: 'db', t: 'iso', s: 3, r: '10-12', rest: '90 sec', v: V('h-invrow', 'Inverted row or one-arm row', 'qMej4KCwReE'), note: 'Pull your elbows toward your hips.' },
-      { slot: 'c', kind: 'band', t: 'iso', log: 'reps', s: 3, r: '8 each', rest: '60 sec', v: V('h-ytwl', 'Y-T-W-L raises'), note: 'Light weights or no weights. Slow reps.' },
-      { slot: 'd', kind: 'db', t: 'iso', s: 4, r: '12-20', rest: '45 sec', v: V('h-lat2', 'DB lateral raise'), note: 'Weight is per hand.' },
-      { slot: 'e', kind: 'bw', t: 'iso', log: 'time', s: 3, r: '20 sec', rest: '45 sec', v: V('h-rkc', 'RKC plank', 'k1H-CF00T3I'), note: 'Squeeze everything as hard as you can. Log seconds.' },
-      { slot: 'f', kind: 'bw', t: 'iso', log: 'time', s: 2, r: '30 sec each side', rest: '45 sec', v: V('h-sideplank', 'Side plank'), note: 'Log seconds per side.' }
-    ]
-  },
-  sat: {
-    title: 'Home Lower C: pump', time: 'About 40 minutes', focus: 'Band and bodyweight glute circuit.', warm: 'lower', after: 'No cardio today.',
-    ex: [
-      {
-        slot: 'a', kind: 'band', t: 'iso', log: 'check', s: 3, r: 'Rounds', rest: '60 sec between rounds',
-        v: V('h-circuit', 'Circuit: side-lying hip abduction 20 each leg, frog pump 50, band quadruped hip extension 20 each leg, lateral band walk 20 each way', 'XPantXkn-Dg'),
-        note: 'Tick each round as you finish it.'
-      },
-      { slot: 'b', kind: 'bw', t: 'iso', log: 'reps', s: 3, r: '30', rest: '45 sec', v: V('h-pulse', 'Squat pulse'), note: 'Pulse in the bottom third of the squat.' },
-      { slot: 'c', kind: 'bw', t: 'iso', log: 'reps', s: 3, r: '20', rest: '45 sec', v: V('h-calf', 'Calf raise'), note: 'Slow reps with a pause at the bottom.' }
-    ]
-  }
-};
-
 export const REST = {
   thu: {
     title: 'Mobility and recovery day',
@@ -286,9 +227,8 @@ export const REST = {
 
 // ---------------------------------------------------------------- helpers
 
-export function exercisesFor(day, mode) {
-  const src = mode === 'home' ? HOME : GYM;
-  return src[day] || null;
+export function exercisesFor(day) {
+  return GYM[day] || null;
 }
 
 export function variantFor(ex, week) {
@@ -345,12 +285,10 @@ export const TRACK_NAMES = (() => {
     squat: 'Back squat', hipthrust: 'Hip thrust (heavy day)', 'hipthrust-pump': 'Hip thrust (pump day)',
     rdl: 'Romanian deadlift', deadlift: 'Deadlift', pullup: 'Pull-up'
   };
-  for (const src of [GYM, HOME]) {
-    for (const day of Object.values(src)) {
-      for (const ex of day.ex) {
-        const list = Array.isArray(ex.v) ? ex.v : [ex.v];
-        for (const v of list) if (!names[v.id]) names[v.id] = v.name.replace(/^(Optional|Superset|Circuit):\s*/i, '').split(',')[0];
-      }
+  for (const day of Object.values(GYM)) {
+    for (const ex of day.ex) {
+      const list = Array.isArray(ex.v) ? ex.v : [ex.v];
+      for (const v of list) if (!names[v.id]) names[v.id] = v.name.replace(/^(Optional|Superset|Circuit):\s*/i, '').split(',')[0];
     }
   }
   return names;
