@@ -112,25 +112,21 @@ export const GYM = {
     ]
   },
   wed: {
-    title: 'Lower 2: hinge and glute shape',
-    time: 'About 65 minutes',
-    focus: 'Hamstrings, glutes and calves, plus cable crunches for the abs.',
+    title: 'Lower 2: deadlift and glute shape',
+    time: 'About 70 minutes',
+    focus: 'Deadlift first while you’re fresh, then Romanian deadlifts, glutes and calves, plus cable crunches for the abs.',
     warm: 'lower',
     after: 'No cardio today.',
     ex: [
       {
-        slot: 'a', kind: 'barbell', t: 'main', top: true, s: [4, 4, 3], r: ['8-10', '8-10', '4-6'], rest: ['2 min', '2 min', '3 min'],
-        v: [V('rdl', 'Romanian deadlift', 'E-lKh2yDzgo'), V('rdl', 'Romanian deadlift, 3-second lowering', 'E-lKh2yDzgo'), V('deadlift', 'Conventional or sumo deadlift', '4NjbwAbSkYw')],
-        note: [
-          'Push your hips back until you feel a hamstring stretch. Keep the bar close to your legs.',
-          'Push your hips back until you feel a hamstring stretch. Keep the bar close to your legs.',
-          'Reset between every rep. No touch-and-go.'
-        ]
+        slot: 'h', kind: 'barbell', t: 'main', top: true, s: 3, r: ['6', '5', '4-6'], rest: '3 min',
+        v: V('deadlift', 'Conventional or sumo deadlift', '4NjbwAbSkYw'),
+        note: 'Reset between every rep. No touch-and-go. Keep the bar close, brace your core, and push the floor away.'
       },
       {
-        slot: 'b', kind: 'db', t: 'iso', s: 3, r: '10-15', rest: '90 sec',
-        v: [V('backext', '45° back extension, rounded upper back', 'ntiYM2RI5wA'), V('backext', '45° back extension, rounded upper back', 'ntiYM2RI5wA'), V('backext', '45° back extension, DB held at chest', 'ntiYM2RI5wA')],
-        note: 'Round your upper back slightly and drive your hips into the pad. Squeeze your glutes at the top. Log any weight you hold.'
+        slot: 'a', kind: 'barbell', t: 'main', s: 3, r: '8-10', rest: '2 min',
+        v: [V('rdl', 'Romanian deadlift', 'E-lKh2yDzgo'), V('rdl', 'Romanian deadlift, 3-second lowering', 'E-lKh2yDzgo'), V('rdl', 'Romanian deadlift', 'E-lKh2yDzgo')],
+        note: 'Lighter than your deadlift. Push your hips back until you feel a hamstring stretch and keep the bar close to your legs.'
       },
       {
         slot: 'c', kind: 'db', t: 'main', s: 3, r: '8-10 each leg', rest: '90 sec',
@@ -192,6 +188,7 @@ export const GYM = {
         note: 'Constant tension and a hard squeeze at the top of every rep.'
       },
       { slot: 'd', kind: 'machine', t: 'iso', s: 3, r: '15-25', rest: '60 sec', v: V('abduct', 'Seated hip abduction machine, last set with a drop set', 'vCHMWIzS3Gs'), note: 'Lean forward slightly and drive your knees out.' },
+      { slot: 'h', kind: 'machine', t: 'iso', s: 2, r: '12-15', rest: '60 sec', v: V('adduct', 'Hip adduction machine'), note: 'Sit tall and squeeze your knees together. Slow on the way back. This builds the inner thigh.' },
       {
         slot: 'e', kind: 'band', t: 'iso', log: 'check', s: 2, r: '30 + 15 steps each way', rest: '60 sec after both',
         v: V('pump2', 'Superset: frog pump, then banded side walk', 'OegaGp_brPs'), note: 'You’re chasing the pump here, not heavy weight.'
